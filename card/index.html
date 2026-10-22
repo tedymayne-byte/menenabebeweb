@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="#162111" name="theme-color"/>
+<title>Menen Abebe — Digital Business Card</title>
+<meta content="Menen Abebe, Principal Attorney at Menen Abebe and Partners Law Office, Addis Ababa." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --olive-950: #0d1a0a;
+    --olive-900: #162111;
+    --olive-800: #1e2f16;
+    --olive-700: #2a3f1e;
+    --olive-200: #a8bc8e;
+    --gold:      #c9a84c;
+    --gold-light:#e8c97a;
+    --cream:     #f5f0e8;
+    --font-serif: 'EB Garamond', Georgia, serif;
+    --font-sans:  'Lato', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, var(--olive-800), var(--olive-950) 70%);
+    color: var(--cream);
+    font-family: var(--font-sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px calc(32px + env(safe-area-inset-bottom));
+  }
+  .card { width: 100%; max-width: 420px; text-align: center; }
+  .photo {
+    width: 132px; height: 132px; border-radius: 50%;
+    object-fit: cover; border: 3px solid var(--gold);
+    box-shadow: 0 4px 24px rgba(201,168,76,0.25);
+  }
+  h1 { font-family: var(--font-serif); font-weight: 600; font-size: 2.1rem; margin-top: 18px; }
+  .title { color: var(--gold-light); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.8rem; margin-top: 4px; }
+  .org { color: var(--olive-200); margin-top: 10px; font-size: 0.95rem; }
+  .divider { width: 56px; height: 1px; background: var(--gold); margin: 24px auto; }
+  .save {
+    display: block; width: 100%; padding: 16px;
+    background: var(--gold); color: var(--olive-950);
+    font-weight: 700; font-size: 1.05rem; text-decoration: none;
+    border-radius: 8px; margin-bottom: 14px;
+  }
+  .links { list-style: none; display: grid; gap: 10px; }
+  .links a, .links button {
+    display: flex; align-items: center; gap: 14px; width: 100%;
+    padding: 14px 16px; border-radius: 8px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.25);
+    color: var(--cream); text-decoration: none; font: inherit; text-align: left; cursor: pointer;
+  }
+  .links svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .links small { display: block; color: var(--olive-200); font-size: 0.75rem; }
+  #qr { display: none; margin-top: 18px; }
+  #qr.open { display: block; }
+  #qr div { display: inline-block; background: #fff; padding: 14px; border-radius: 8px; }
+  #qr p { color: var(--olive-200); font-size: 0.8rem; margin-top: 8px; }
+  footer { color: var(--olive-200); font-size: 0.75rem; margin-top: 28px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main class="card">
+  <img alt="Menen Abebe" class="photo" height="132" src="photo.jpg" width="132"/>
+  <h1>Menen Abebe</h1>
+  <p class="title">Principal Attorney</p>
+  <p class="org">Menen Abebe and Partners Law Office<br/>Addis Ababa, Ethiopia</p>
+  <div class="divider"></div>
+
+  <a class="save" download="Menen Abebe.vcf" href="menen-abebe.vcf">Save Contact</a>
+
+  <ul class="links">
+    <li><a href="tel:+251911250118">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+      <span><small>Call</small>+251 911 250 118</span></a></li>
+    <li><a href="mailto:info@menenabebe.com">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span><small>Email</small>info@menenabebe.com</span></a></li>
+    <li><a href="https://wa.me/251911250118">
+      <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      <span><small>WhatsApp</small>Message me</span></a></li>
+    <li><a href="../">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <span><small>Website</small>Practice areas &amp; consultations</span></a></li>
+    <li><button id="shareBtn" type="button">
+      <svg viewBox="0 0 24 24"><rect height="7" width="7" x="3" y="3"/><rect height="7" width="7" x="14" y="3"/><rect height="7" width="7" x="3" y="14"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>
+      <span><small>Share</small>Show QR code for this card</span></button></li>
+  </ul>
+
+  <div id="qr"><div id="qrCode"></div><p>Scan to open this card</p></div>
+
+  <footer>&copy; Menen Abebe and Partners Law Office</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  // Shows a QR code of this page, for phones without NFC (e.g. older iPhones).
+  const qr = document.getElementById('qr');
+  let drawn = false;
+  document.getElementById('shareBtn').addEventListener('click', () => {
+    qr.classList.toggle('open');
+    if (!drawn && window.QRCode) {
+      new QRCode(document.getElementById('qrCode'), { text: location.href, width: 200, height: 200 });
+      drawn = true;
+    }
+  });
+</script>
+</body>
+</html>
